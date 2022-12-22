@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.focus {
+  background: yellow;
+  color: #000;
+  border: 1px solid rgb(117, 112, 112);
+  font-size: small;
+}
+.w-40 {
+  width: 25px;
+  height: 40px;
+}
+.w-41 {
+  width: 260px;
+}
+.container {
+  position: relative;
+  width: 100%;
+}
+.text-block {
+  position: absolute;
+  bottom: 200px;
+  right: 30px;
+  width: 350px;
+  height: 200px;
+  margin-right: 723px;
+  box-shadow: 0px -1px 18px 3px #000;
+}
+.bg1 {
+  background-color: #dedede;
+  position: relative;
+  width: 900px;
+  height: 700px;
+}
+.insta {
+  margin-bottom: 140px;
+}
+.contact-me {
+  position: relative;
+  bottom: 32px;
+  right: 82px;
+  font-style: inherit;
+  font-size: 3rem;
+}
+.dword {
+  margin-bottom: -6px;
+  margin-right: 200px;
+}
+.box {
+  position: relative;
+  bottom: -30px;
+  right: -185px;
+  font-style: inherit;
+  font-size: 3rem;
+  height: 31px;
+  width: 57px;
+  border: none;
+  background-color: rgb(159, 93, 73);
+}
+.foot-line {
+  height: 100px;
+  background-color: rgb(3, 3, 3);
+}
+.col-7 {
+  background-color: #1a1a1a;
+}
+
+
+.card {
+  padding: 30px 40px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  border: none !important;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+}
+.blue-text {
+  color: #00bcd4;
+}
+.form-control-label {
+  margin-bottom: 0;
+}
+input,
+textarea,
+button {
+  padding: 8px 15px;
+  border-radius: 5px !important;
+  margin: 5px 0px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  font-size: 18px !important;
+  font-weight: 300;
+}
+input:focus,
+textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid #424444;
+  outline-width: 0;
+  font-weight: 400;
+}
+.btn-block {
+  text-transform: uppercase;
+  font-size: 15px !important;
+  font-weight: 400;
+  height: 43px;
+  cursor: pointer;
+}
+.btn-block:hover {
+  color: rgb(191, 53, 53) !important;
+}
+button:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline-width: 0;
+}
+@media screen and (max-width: 600px) {
+  .text-block {
+    position: absolute;
+    left: 160px;
+    top: 313px;
+    width: 350px;
+    height: 200px;
+    margin-right: 723px;
+    box-shadow: 0px -1px 18px 3px #000;
+  }
+    
+  }
+
+
+

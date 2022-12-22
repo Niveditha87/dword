@@ -1,0 +1,958 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+.anyone{
+    font-size:59px;
+}
+.box-animation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 1049px;
+    /* background:linear-gradient(to left bottom, #055e11, #204a0c, #24370d, #20260f, #161611); */
+    background :linear-gradient(to right, #3a704e, #335e42, #2c4c37, #253b2c, #1e2b22);
+    /* margin-top: 56px; */
+}
+.cube{
+    position: relative;
+    width: 30px;
+    height: 300px;
+  }
+  .cube div
+  {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+animation: animate 6s linear infinite;
+/* transform: rotateX(-20deg) rotateY(25deg); */
+  }
+  @keyframes animate {
+    0%{
+        transform: rotateX(-20deg) rotateY(360deg);
+    }
+    100%{
+        transform: rotateX(-20deg) rotateY(0deg);
+    }
+    /* 0%{
+        transform: rotateX(-20deg) rotateY(30deg);
+    } */
+  }
+  .cube .big span{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: var(--clr);
+    transform:rotateY(calc(90deg * var(--i))) translateZ(150px) ;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    
+  }
+  .cube:hover .big span
+  {
+    background: transparent;
+    border: 10px solid #ede6df;
+    filter: drop-shadow(0 0 20px #e7e2dc);
+  }
+  .cube .big span.top
+  {
+  transform: rotateX(90deg) translateZ(150px);
+  }
+  .cube .big span .top::before
+  {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateZ(-350px);
+    background: rgba(0, 0, 0, 0.5);
+    filter: blur(50px);
+  }
+
+
+
+
+
+
+
+
+
+
+
+  .cube2{
+    position: relative;
+    width: 30px;
+    height: 300px;
+    top: 50%;
+    right: 4%;
+    /* left: 50%; */
+    transform: translate(-50%,-350px);
+  }
+  .cube2 div
+  {
+position: absolute;
+top: 80px;
+left: 17px;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+animation: animate2 6s linear infinite;
+scale: 0.5;
+  }
+  @keyframes animate2 {
+    0%{
+        transform: rotateX(-20deg) rotateY(0deg);
+    }
+    100%{
+        transform: rotateX(-20deg) rotateY(360deg);
+    }
+    /* 0%{
+        transform: rotateX(-20deg) rotateY(30deg);
+    } */
+  }
+  .cube2 .big span{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: var(--clr);
+    transform:rotateY(calc(90deg * var(--i))) translateZ(150px) ;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+  }
+  .cube:hover ~ .cube2 .big span
+  {
+    background: transparent;
+    border: 10px solid  rgb(71, 67, 87);
+    filter: drop-shadow(0 0 20px rgb(71, 67, 87));
+  }
+  .cube2 .big span.top
+  {
+  transform: rotateX(90deg) translateZ(150px);
+  }
+  .cube2 .big span .top::before
+  {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateZ(-350px);
+    background: rgba(0, 0, 0, 0.5);
+    filter: blur(50px);
+  }
+
+
+
+
+
+
+  /* .web{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #131313;
+  } */
+  
+  .container{
+    position: relative;
+    margin-left: 30px;
+  }
+  .card{
+    margin-left: 30px;
+    margin-top: 14px;
+
+  }
+  .card1{
+    margin-left: 30px;
+    margin-top: 14px;
+
+  }
+  .card2{
+    margin-left: 30px;
+    margin-top: 10px;
+
+  }
+  .card3{
+    margin-left: 30px;
+    margin-top: 14px;
+  }
+  .card4{
+    margin-left: 30px;
+    margin-top: 12px;
+  }
+  
+  .container .card{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+
+  }
+  
+  .container .card:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #8A8383;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+  }
+  
+  .container .card:hover:before{
+    clip-path: circle(300px at 80% -20%);
+  }
+  
+  .container .card:after{
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(25, 255, 29, 0.05)
+  }
+  
+  .container .card .imgBx{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+  }
+  
+  .container .card:hover .imgBx{
+    top: 0%;
+    transform: translateY(0%);
+      
+  }
+  
+  .container .card .imgBx img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 270px;
+  }
+  
+  .container .card .contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+  }
+  
+  .container .card:hover .contentBx{
+    height: 240px;
+  }
+  
+  .container .card .contentBx h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 10px;
+  }
+    
+  .container .card .contentBx h1{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin:0px;
+  }
+  .container .card .contentBx h3{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    /* margin-bottom:23px; */
+  }
+  
+  
+  .container .card .contentBx .size, .container .card .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;opacity: 0;
+    visibility: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  .container .card:hover .contentBx .size{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+  }
+  
+  .container .card:hover .contentBx .color{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+  }
+  
+  .container .card .contentBx .size h3, .container .card .contentBx .color h3{
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+  }
+  
+  .container .card .contentBx .size span{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .container .card .contentBx .size span:hover{
+    background: #9bdc28;
+  }
+  
+  .container .card{
+    cursor: pointer;
+  }
+
+  .container .card .contentBx a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+    margin-top: 0;
+  }
+  
+  .container .card:hover .contentBx a{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+    
+  }
+  
+
+
+
+
+  .container .card2{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+
+  }
+  
+  .container .card2:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #C4A43F;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+  }
+  
+  .container .card2:hover:before{
+    clip-path: circle(300px at 80% -20%);
+  }
+  
+  .container .card2:after{
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(25, 255, 29, 0.05)
+  }
+  
+  .container .card2 .imgBx{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+  }
+  
+  .container .card2:hover .imgBx{
+    top: 0%;
+    transform: translateY(0%);
+      
+  }
+  
+  .container .card2 .imgBx img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 270px;
+  }
+  
+  .container .card2 .contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+  }
+  
+  .container .card2:hover .contentBx{
+    height: 240px;
+  }
+  
+  .container .card2 .contentBx h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 10px;
+  }
+    
+  .container .card2.contentBx h1{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin:0px;
+  }
+  .container .card2 .contentBx h3{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    /* margin-bottom:23px; */
+  }
+  
+  
+  .container .card2 .contentBx .size, .container .card2 .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;opacity: 0;
+    visibility: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  .container .card2:hover .contentBx .size{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+  }
+  
+  .container .card2:hover .contentBx .color{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+  }
+  
+  .container .card2 .contentBx .size h3, .container .card2 .contentBx .color h3{
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+  }
+  
+  .container .card2 .contentBx .size span{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .container .card2 .contentBx .size span:hover{
+    background: #9bdc28;
+  }
+  
+  .container .card2{
+    cursor: pointer;
+  }
+
+  .container .card2 .contentBx a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+    margin-top: 0;
+  }
+  
+  .container .card2:hover .contentBx a{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+    
+  }
+
+  
+  
+  
+
+
+
+  .container .card3{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+
+  }
+  
+  .container .card3:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0174AF;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+  }
+  
+  .container .card3:hover:before{
+    clip-path: circle(300px at 80% -20%);
+  }
+  
+  .container .card3:after{
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(25, 255, 29, 0.05)
+  }
+  
+  .container .card3 .imgBx{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+  }
+  
+  .container .card3:hover .imgBx{
+    top: 0%;
+    transform: translateY(0%);
+      
+  }
+  
+  .container .card3 .imgBx img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 270px;
+  }
+  
+  .container .card3 .contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+  }
+  
+  .container .card3:hover .contentBx{
+    height: 240px;
+  }
+  
+  .container .card3 .contentBx h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 10px;
+  }
+    
+  .container .card3.contentBx h1{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin:0px;
+  }
+  .container .card3 .contentBx h3{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    /* margin-bottom:23px; */
+  }
+  
+  
+  .container .card3 .contentBx .size, .container .card3 .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;opacity: 0;
+    visibility: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  .container .card3:hover .contentBx .size{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+  }
+  
+  .container .card3:hover .contentBx .color{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+  }
+  
+  .container .card3 .contentBx .size h3, .container .card3 .contentBx .color h3{
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+  }
+  
+  .container .card3 .contentBx .size span{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .container .card3 .contentBx .size span:hover{
+    background: #9bdc28;
+  }
+  
+  .container .card3{
+    cursor: pointer;
+  }
+
+  .container .card3 .contentBx a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+    margin-top: 0;
+  }
+  
+  .container .card3:hover .contentBx a{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+    
+  }
+
+
+
+  .container .card4{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .container .card4:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #5F8F3E;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+  }
+  
+  .container .card4:hover:before{
+    clip-path: circle(300px at 80% -20%);
+  }
+  
+  .container .card4:after{
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(25, 255, 29, 0.05)
+  }
+  
+  .container .card4 .imgBx{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+  }
+  
+  .container .card4:hover .imgBx{
+    top: 0%;
+    transform: translateY(0%);
+      
+  }
+  
+  .container .card4 .imgBx img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 270px;
+  }
+  
+  .container .card4 .contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+  }
+  
+  .container .card4:hover .contentBx{
+    height: 240px;
+  }
+  
+  .container .card4 .contentBx h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 10px;
+  }
+    
+  .container .card4.contentBx h1{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin:0px;
+  }
+  .container .card4 .contentBx h3{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    /* margin-bottom:23px; */
+  }
+  
+  
+  .container .card4 .contentBx .size, .container .card4 .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;opacity: 0;
+    visibility: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  .container .card4:hover .contentBx .size{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+  }
+  
+  .container .card4:hover .contentBx .color{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+  }
+  
+  .container .card4 .contentBx .size h3, .container .card4 .contentBx .color h3{
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+  }
+  
+  .container .card4 .contentBx .size span{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .container .card4 .contentBx .size span:hover{
+    background: #9bdc28;
+  }
+  
+  .container .card4{
+    cursor: pointer;
+  }
+
+  .container .card4 .contentBx a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+    margin-top: 0;
+  }
+  
+  .container .card4:hover .contentBx a{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+    
+  }
+
+button{
+  height: 50px;
+  width: 100px;
+  border: 1px solid rgb(24, 24, 24);
+  border-radius:6px;
+   
+}
+
+
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+.destop-view{
+  display: flex;
+  /* display:block; */
+  width: 100%;
+  height: 100%;
+  
+
+}
+.home-text{
+  height: 1049px;
+}
+
+.content{
+  width: 50%;
+  /* height:600px; */
+  height: 50%;
+}
+
+.home-text{
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+.box-cube{
+  width: 50%;
+}
+.web{
+  display: flex;
+  background-color: white;
+}
+.nav-home{
+  display: block;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nav-bar{
+  display: inline;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+}
